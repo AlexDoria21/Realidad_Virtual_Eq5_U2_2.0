@@ -15,8 +15,10 @@ public class GameOver : MonoBehaviour
     void Update()
     {
         // Verificamos si la posición en Y del jugador es menor al umbral (en este caso 0)
-        if (transform.position.y < fallThreshold)
-        {
+        float valor_y;
+        valor_y = transform.position.y;
+
+        if (valor_y < 0){       
             // Cargar la escena de Game Over
             SceneManager.LoadScene(gameOverSceneName);
         }
